@@ -37,6 +37,14 @@ func (h handler) BuildCredentials(request authnhttp.InitiateRequest) (authn.Cred
 	return password.NewCredentials(identifier, payload.Password), nil
 }
 
+func (h handler) BuildChallenge(challenge authn.Challenge) (authnhttp.Challenge, error) {
+	return nil, nil
+}
+
+func (h handler) BuildSession(session authn.Session) (authnhttp.Session, error) {
+	return nil, nil
+}
+
 func (h handler) HandleRespond(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(400)
 }

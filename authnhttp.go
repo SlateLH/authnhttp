@@ -121,7 +121,7 @@ func (r router) handleInitiate(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	w.WriteHeader(200)
+	writeResult(w, handler, result)
 }
 
 type routerOption func(*router)
